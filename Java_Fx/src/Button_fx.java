@@ -1,7 +1,7 @@
 /**
  * 
  */
-import javafx.application.Application;
+import javafx.application.*;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
@@ -13,10 +13,6 @@ import javafx.stage.Stage;
  */
 public class Button_fx extends Application{
 
-	public Button_fx() 
-	{
-		
-	}
 
 	public static void main(String[] args) 
 	{
