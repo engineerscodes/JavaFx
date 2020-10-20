@@ -17,7 +17,7 @@ public class basic extends Application {
 	@Override
 	public void start(Stage arg0) throws Exception 
 	{   
-		arg0.show();  //simple frame
+		arg0.show();  //simple Window
 		
 	}
 
