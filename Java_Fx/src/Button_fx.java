@@ -11,9 +11,9 @@ import javafx.stage.Stage;
    RANDOM CODER'S
  *
  */
-public class hello_world extends Application{
+public class Button_fx extends Application{
 
-	public hello_world() 
+	public Button_fx() 
 	{
 		
 	}
