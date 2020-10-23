@@ -31,16 +31,20 @@ public void stop()
 	@Override
 	public void start(Stage primaryStage) throws Exception
 	{
-         // Platform.exit();
+         
           Scene root=new Scene(new Group(),500,500);
           primaryStage.setTitle("closing Window using Platform.exit()");
           primaryStage.setScene(root);
           primaryStage.show();
-          Platform.setImplicitExit(false);//to stop from exiting 
+         // Platform.exit();
+        //  Platform.setImplicitExit(false);//to stop from exiting 
           /*
            * If you don't want your application to automatically close, add the following code at the
              beginning of your program:
            */
+          Stage new_stage=new Stage();
+          new_stage.show();
+          Platform.setImplicitExit(false);
 	}
 
 }
