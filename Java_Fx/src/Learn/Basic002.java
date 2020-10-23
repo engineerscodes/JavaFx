@@ -37,6 +37,10 @@ public void stop()
           primaryStage.setScene(root);
           primaryStage.show();
           Platform.setImplicitExit(false);//to stop from exiting 
+          /*
+           * If you don't want your application to automatically close, add the following code at the
+             beginning of your program:
+           */
 	}
 
 }
