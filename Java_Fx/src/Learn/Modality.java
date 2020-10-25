@@ -7,6 +7,8 @@ import javafx.application.Platform;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import javafx.stage.*;
 /**
  *  @author M.NAVEEN
  *  RANDOM CODER'S
@@ -25,10 +27,11 @@ public class Modality extends Application {
 
 	@Override
 	public void start(Stage stage1) throws Exception 
-	{
+	{   
 		Scene scene = new Scene(new Group(), 300, 250);
 		stage1.setTitle("Main Window");
 		stage1.setScene(scene);
+		stage1.initStyle(StageStyle.UTILITY);
 		stage1.show();
 		// this window doesn't block mouse and keyboard events
 		Stage stage2 = new Stage();
