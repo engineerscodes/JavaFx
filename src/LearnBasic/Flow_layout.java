@@ -1,7 +1,13 @@
 package LearnBasic;
 
 import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+
+import java.awt.*;
 
 public class Flow_layout extends Application {
     /**
@@ -22,6 +28,18 @@ public class Flow_layout extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception
     {
+        FlowPane fp=new FlowPane(5,5);
+        for(int i=0;i<5;i++)
+        {
+            for(int j=0;j<5;j++)
+            {
+                double size=5+30*Math.random();
+                Rectangle r=new Rectangle(size,size,(i+j)%2==0?Color.RED:Color.BLACK);
+                fp.getChildren().add(r);
+            }
+        }
+        primaryStage.setScene(new Scene(fp));
+        primaryStage.show();
 
     }
     public static void main(String ...arg)
