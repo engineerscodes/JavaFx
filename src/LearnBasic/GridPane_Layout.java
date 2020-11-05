@@ -3,7 +3,11 @@ package LearnBasic;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.RowConstraints;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 public class GridPane_Layout extends Application
@@ -28,6 +32,30 @@ public class GridPane_Layout extends Application
             window=primaryStage;
             GridPane gp=new GridPane();
             gp.setPadding(new Insets(10,10,10,10));
+            //creating r0l Z&col
+        for(int i=0;i<5;i++)
+        {
+            gp.getColumnConstraints().add(new ColumnConstraints(50));
+            gp.getRowConstraints().add(new RowConstraints(60));
+        }
+        /*
+        Row/Column Sizing
+        By default, rows and columns will be sized to fit their content; a column will be wide enough to accommodate
+        the widest child, a row tall enough to fit the tallest child.However, if an application needs to explicitly control
+        the size of rows or columns, it may do so by adding RowConstraints and ColumnConstraints objects to specify those metrics.
+        For example, to create a grid with two fixed-width columns:
+
+        GridPane gridpane = new GridPane();
+        gridpane.getColumnConstraints().add(new ColumnConstraints(100)); // column 0 is 100 wide
+        gridpane.getColumnConstraints().add(new ColumnConstraints(200)); // column 1 is 200 wide
+         */
+
+        for(int i=0;i<5;i++)
+            for(int j=0;j<5;j++)
+            {
+                if((i+j)%2==0)
+                    gp.add(new Rectangle(50,60, Color.BLACK),i,j);
+            }
             window.setScene(new Scene(gp));
             window.setTitle("GRID PANE -");
             window.show();
