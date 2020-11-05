@@ -42,7 +42,7 @@ public class BoarderPane_Layout extends Application {
         bp.setRight(new Text("nothing"));
         bp.setRight(new Text("RIGHT")); //it will overwritre nothing
         primaryStage.setScene(new Scene(bp));
-        BorderPane.setAlignment(t, Pos.CENTER);
+         bp.setAlignment(t, Pos.CENTER);
         primaryStage.show();
     }
 }
