@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
@@ -38,6 +39,18 @@ public class Button_event extends Application
         Label l=new Label("Hi=============================================================!!!!!");
         l.setPadding(new Insets(100,20,50,60));
         l.setWrapText(true);
+        Hyperlink hpl=new Hyperlink("It remenber");
+        hpl.setGraphic(new Rectangle(25,25,Color.GREEN));
+        hpl.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent e)
+            {
+               // count++;
+                l.setText("Clicked Me:");
+
+            }
+        });
+
          Button b=new Button("Click me");
          b.setGraphic(new Circle(10, Color.RED));
          b.setCancelButton(true); //if u press Cancel Button the it will be counted has clicked (ESC)
@@ -53,7 +66,7 @@ public class Button_event extends Application
          });
         sp.getChildren().add(b);
 
-        sp.getChildren().add(l);
+        sp.getChildren().addAll(l,hpl);
         primaryStage.setScene(new Scene(sp));
       primaryStage.show();
     }
