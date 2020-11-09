@@ -39,7 +39,7 @@ public class Button_event extends Application
         Label l=new Label("Hi=============================================================!!!!!");
         l.setPadding(new Insets(100,20,50,60));
         l.setWrapText(true);
-        Hyperlink hpl=new Hyperlink("It remenber");
+        Hyperlink hpl=new Hyperlink("It remember");
         hpl.setGraphic(new Rectangle(25,25,Color.GREEN));
         hpl.setOnAction(new EventHandler<ActionEvent>(){
             @Override
