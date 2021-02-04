@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Control;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -17,7 +18,7 @@ public class set_max_min_preSize extends Application
         Button btn1=new Button("Setmin");
                 btn1.setMinWidth(150);
                 btn1.setPrefWidth(200);
-                btn1.setMinHeight(50);
+                btn1.setMinHeight(Control.USE_PREF_SIZE);
         v.getChildren().addAll(new Button("Hi"),new Button("Mind_Hack"),btn1,new Button("==========="));
         primaryStage.setScene(new Scene(v));
         primaryStage.show();
